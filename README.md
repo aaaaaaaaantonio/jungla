@@ -20,12 +20,17 @@ Los textos de la página (títulos, botones, dirección, horario) están en el o
 
 ## Fotos
 
-| Espacio | Archivo | Qué va ahí |
-| --- | --- | --- |
-| `plato-costillas`, `plato-pescado`, `plato-ensalada-cesar`, `plato-rollitos` | `assets/img/*.jpg` | Fotos de platos, recortadas de las capturas de la carta. Retrato alto (1:2). |
-| `cierre` | foto provisional de Wikimedia Commons | La barra de La Jungla de noche, con las botellas iluminadas. Retrato 4:5. |
+Todas salen del Instagram del local (@la__jungla), recortadas de capturas de pantalla sin los íconos ni los textos encima. Las capturas originales están en `referencias/instagram/`.
 
-Para cambiar una foto, reemplaza el archivo en `assets/img/` con el mismo nombre, o cambia la ruta en `build.mjs` y vuelve a correr `node build.mjs`. La foto provisional de la barra lleva su crédito en el pie de página; al cambiarla por una propia, borra ese crédito en `build.mjs`.
+| Espacio | Archivo | Qué muestra |
+| --- | --- | --- |
+| `mesa-amigas` | `assets/img/mesa-amigas.jpg` | Tres amigas comiendo en una mesa. Foto grande, retrato 4:5. |
+| `pasta-amatriciana` | `assets/img/pasta-amatriciana.jpg` | Pasta amatriciana de cerca. |
+| `hamburguesa-brioche` | `assets/img/hamburguesa-brioche.jpg` | Hamburguesa en pan brioche sobre fondo oscuro. |
+| `cierre` | `assets/img/barra.jpg` | Una clienta en su mesa, con la barra iluminada detrás. Retrato 4:5. |
+| logo | `assets/img/logo-la-jungla.png` | Logo con fondo transparente, recortado de una foto del Instagram. |
+
+Las capturas tienen como mucho 923 px de ancho, así que con las fotos originales (o el logo en vector) la página se vería más nítida. Para cambiar una foto, reemplaza el archivo en `assets/img/` con el mismo nombre.
 
 ## Publicar en GitHub Pages
 

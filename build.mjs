@@ -37,10 +37,9 @@ const T = {
     ],
     platosLabel: "Platos de La Jungla",
     platos: [
-      ["costillas", "Costillas glaseadas con ajonjolí y papas fritas", "Plato de la carta, foto del cliente: costillas"],
-      ["pescado", "Pescado a la plancha sobre salsa naranja, con puré", "Plato de la carta, foto del cliente: pescado"],
-      ["ensalada-cesar", "Ensalada César con tocineta y parmesano", "Plato de la carta, foto del cliente: ensalada César"],
-      ["rollitos", "Rollitos de papel de arroz con cangrejo y vegetales", "Plato de la carta, foto del cliente: rollitos"],
+      ["mesa-amigas", "Tres amigas comen hamburguesas con papas en una mesa de La Jungla", "Gente comiendo en una mesa de La Jungla, de noche", 923, 1000],
+      ["pasta-amatriciana", "Pasta amatriciana con tocineta y parmesano", "Un plato de la carta, de cerca", 923, 750],
+      ["hamburguesa-brioche", "Hamburguesa con tocineta, cheddar y lechuga en pan brioche", "Un plato de la carta, de cerca y sobre fondo oscuro", 923, 875],
     ],
     cartaH: "¿Qué hay en la carta?",
     cartaLead: "Precios en dólares. Toca un plato para ver qué lleva.",
@@ -65,12 +64,12 @@ const T = {
     deliveryQ: "¿Prefieres delivery?",
     deliveryA: "Pídelo por WhatsApp",
     cierreAlt: "La barra de La Jungla de noche, con las botellas iluminadas",
-    cierreImgAlt: "Barra de cócteles en penumbra, con estantes de botellas iluminadas",
+    cierreImgAlt: "Una clienta come en una mesa de La Jungla, con la barra y sus botellas iluminadas detrás",
     barText: "Mesa o delivery, por WhatsApp.",
     barDelivery: "Pedir delivery",
     barBook: "Reservar mesa",
     colophon: `La Jungla Gastro Bar, Av. Perimetral, Puerto Ayacucho, estado Amazonas, Venezuela. Abierto de martes a domingo. Reservas y delivery por WhatsApp al <a href="https://wa.me/${WA}">+58${NB}416${NB}502${NB}7741</a>; en Instagram, <a href="${IG}">@la__jungla</a>. RIF J-401829481.`,
-    credits: `Fotografías: platos, de la carta de La Jungla; barra, <a href="https://commons.wikimedia.org/wiki/File:Cure_cocktail_bar_New_Orleans_2011.jpg">Chelsea Marie Hicks</a> (CC BY 2.0, Wikimedia Commons).`,
+    credits: "Fotografías de La Jungla, tomadas de su Instagram.",
   },
   en: {
     title: "La Jungla Gastro Bar, where to eat in Puerto Ayacucho",
@@ -98,10 +97,9 @@ const T = {
     ],
     platosLabel: "Dishes at La Jungla",
     platos: [
-      ["costillas", "Glazed ribs with sesame and fries", "A dish from the menu, the client’s photo: ribs"],
-      ["pescado", "Pan-seared fish on an orange sauce, with mash", "A dish from the menu, the client’s photo: fish"],
-      ["ensalada-cesar", "Caesar salad with bacon and parmesan", "A dish from the menu, the client’s photo: Caesar salad"],
-      ["rollitos", "Rice paper rolls with crab and vegetables", "A dish from the menu, the client’s photo: rolls"],
+      ["mesa-amigas", "Three friends eating burgers and fries at a table in La Jungla", "People eating at a table in La Jungla, at night", 923, 1000],
+      ["pasta-amatriciana", "Pasta amatriciana with bacon and parmesan", "A dish from the menu, close up", 923, 750],
+      ["hamburguesa-brioche", "A burger with bacon, cheddar and lettuce on a brioche bun", "A dish from the menu, close up on a dark ground", 923, 875],
     ],
     cartaH: "What’s on the menu?",
     cartaLead: "Prices in US dollars. Tap a dish to see what’s in it.",
@@ -126,12 +124,12 @@ const T = {
     deliveryQ: "Rather have it delivered?",
     deliveryA: "Order on WhatsApp",
     cierreAlt: "La Jungla’s bar at night, the bottles lit",
-    cierreImgAlt: "A dim cocktail bar with lit shelves of bottles",
+    cierreImgAlt: "A guest eating at a table in La Jungla, the bar and its lit bottles behind her",
     barText: "A table or delivery, on WhatsApp.",
     barDelivery: "Order delivery",
     barBook: "Book a table",
     colophon: `La Jungla Gastro Bar, Av. Perimetral, Puerto Ayacucho, Amazonas state, Venezuela. Open Tuesday to Sunday. Bookings and delivery on WhatsApp at <a href="https://wa.me/${WA}">+58${NB}416${NB}502${NB}7741</a>; on Instagram, <a href="${IG}">@la__jungla</a>. RIF J-401829481.`,
-    credits: `Photographs: dishes, from La Jungla’s menu; the bar, <a href="https://commons.wikimedia.org/wiki/File:Cure_cocktail_bar_New_Orleans_2011.jpg">Chelsea Marie Hicks</a> (CC BY 2.0, Wikimedia Commons).`,
+    credits: "Photographs by La Jungla, from its Instagram.",
   },
 };
 
@@ -238,7 +236,7 @@ function page(lang) {
 
 <nav class="bar" aria-label="${t.navLabel}" data-bar>
   <div class="container bar__in">
-    <a class="wordmark" href="${lang === "es" ? "./" : "./"}" aria-label="${t.home}">La Jungla<span>Gastro Bar</span></a>
+    <a class="wordmark" href="./" aria-label="${t.home}"><img src="${root}assets/img/logo-la-jungla.png" width="500" height="480" alt=""></a>
     <ul class="bar__links" role="list">
       ${t.nav.map(([h, l]) => `<li><a href="${h}">${l}</a></li>`).join("\n      ")}
     </ul>
@@ -267,7 +265,7 @@ function page(lang) {
 
   <section class="platos" aria-label="${t.platosLabel}">
     <div class="container platos__grid">
-      ${t.platos.map(([f, alt, slot]) => `<figure class="photo photo--plato" data-slot="plato-${f}" data-alt="${esc(slot)}"><img src="${root}assets/img/${f}.jpg" width="255" height="1192" alt="${esc(alt)}" loading="lazy"></figure>`).join("\n      ")}
+      ${t.platos.map(([f, alt, slot, w, h], i) => `<figure class="photo ${i === 0 ? "photo--lead" : "photo--side"}" data-slot="${f}" data-alt="${esc(slot)}"><img src="${root}assets/img/${f}.jpg" width="${w}" height="${h}" alt="${esc(alt)}" loading="lazy"></figure>`).join("\n      ")}
     </div>
   </section>
 
@@ -332,7 +330,7 @@ function page(lang) {
         </form>
         <p class="delivery">${t.deliveryQ} <a href="${wa(t.waDelivery)}" target="_blank" rel="noopener">${t.deliveryA}</a>.</p>
       </div>
-      <figure class="photo photo--cierre" data-slot="cierre" data-alt="${esc(t.cierreAlt)}"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Cure_cocktail_bar_New_Orleans_2011.jpg/1280px-Cure_cocktail_bar_New_Orleans_2011.jpg" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Cure_cocktail_bar_New_Orleans_2011.jpg/960px-Cure_cocktail_bar_New_Orleans_2011.jpg 960w, https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Cure_cocktail_bar_New_Orleans_2011.jpg/1280px-Cure_cocktail_bar_New_Orleans_2011.jpg 1280w, https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Cure_cocktail_bar_New_Orleans_2011.jpg/1920px-Cure_cocktail_bar_New_Orleans_2011.jpg 1920w" sizes="(min-width: 60rem) 45vw, 100vw" width="4752" height="3168" alt="${esc(t.cierreImgAlt)}" style="object-position: 30% 50%" loading="lazy"></figure>
+      <figure class="photo photo--cierre" data-slot="cierre" data-alt="${esc(t.cierreAlt)}"><img src="${root}assets/img/barra.jpg" width="800" height="1000" alt="${esc(t.cierreImgAlt)}" style="object-position: 50% 40%" loading="lazy"></figure>
     </div>
   </section>
 </main>
@@ -349,7 +347,7 @@ function page(lang) {
 
 <footer class="colophon">
   <div class="container colophon__in">
-    <p class="colophon__mark">La Jungla<span>Gastro Bar</span></p>
+    <p class="colophon__mark"><img src="${root}assets/img/logo-la-jungla.png" width="500" height="480" alt="La Jungla Gastro Bar"></p>
     <div class="colophon__text">
       <p>${t.colophon}</p>
       <p class="colophon__credits" data-credits>${t.credits}</p>

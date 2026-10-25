@@ -1,0 +1,163 @@
+{
+  "nota": "Carta de La Jungla Gastro Bar. Precios en dólares. Para cambiar un precio o un plato, edita este archivo y corre: node build.mjs",
+  "cocinas": [
+    {
+      "id": "clasica",
+      "nombre": { "es": "Clásica", "en": "Classic" },
+      "grupos": [
+        {
+          "nombre": { "es": "Para empezar", "en": "To start" },
+          "platos": [
+            { "nombre": { "es": "Cóctel de camarones", "en": "Shrimp cocktail" }, "desc": { "es": "Con zumo de limón y salsa roja.", "en": "With lime juice and cocktail sauce." }, "precio": 15 },
+            { "nombre": { "es": "Alitas BBQ", "en": "BBQ wings" }, "desc": { "es": "5 unidades horneadas y barnizadas en salsa BBQ.", "en": "5 pieces, baked and glazed in BBQ sauce." }, "precio": 9 },
+            { "nombre": { "es": "Ceviche", "en": "Ceviche" }, "desc": { "es": "Corvina, leche de tigre y crujiente de plátano.", "en": "Corvina, leche de tigre and crispy plantain." }, "precio": 11 },
+            { "nombre": { "es": "Ensalada César", "en": "Caesar salad" }, "desc": { "es": "Crotones, tocineta y aderezo César con parmesano.", "en": "Croutons, bacon and Caesar dressing with parmesan." }, "variantes": [
+              { "nombre": { "es": "Clásica", "en": "Classic" }, "precio": 10 },
+              { "nombre": { "es": "Con tiras de pollo crispy", "en": "With crispy chicken strips" }, "precio": 12 },
+              { "nombre": { "es": "Con camarones rebozados", "en": "With battered shrimp" }, "precio": 15 }
+            ] },
+            { "nombre": { "es": "Salpicón", "en": "Salpicón" }, "desc": { "es": "De mariscos varios con chips de plátano.", "en": "Mixed seafood with plantain chips." }, "precio": 16 },
+            { "nombre": { "es": "Tequeños", "en": "Tequeños" }, "desc": { "es": "De queso.", "en": "Venezuelan cheese sticks." }, "precio": 6 }
+          ]
+        },
+        {
+          "nombre": { "es": "Platos fuertes", "en": "Mains" },
+          "platos": [
+            { "nombre": { "es": "Centro de lomito", "en": "Beef tenderloin" }, "desc": { "es": "200 g de centro de lomito de res al término, con salsa de oporto, champiñones o maître d’hôtel.", "en": "200 g centre-cut beef tenderloin cooked to order, with port, mushroom or maître d’hôtel sauce." }, "precio": 18 },
+            { "nombre": { "es": "Churrasco de pescado", "en": "Fish steak" }, "desc": { "es": "Con salsa meunière, al ajillo, salsa verde o vinagreta de limón y alcaparras.", "en": "With meunière, garlic, green sauce or a lemon and caper vinaigrette." }, "variantes": [
+              { "nombre": { "es": "Con salsa a elección", "en": "With a sauce of your choice" }, "precio": 16 },
+              { "nombre": { "es": "Con curry o ajillo de camarones", "en": "With shrimp curry or garlic shrimp" }, "precio": 18 }
+            ] },
+            { "nombre": { "es": "Cordon bleu de ave", "en": "Chicken cordon bleu" }, "precio": 16 },
+            { "nombre": { "es": "Milanesa de pollo", "en": "Chicken milanesa" }, "desc": { "es": "Suprema empanizada con salsa napolitana al gratén.", "en": "Breaded chicken breast with Neapolitan sauce, gratinated." }, "precio": 15 },
+            { "nombre": { "es": "Costillas de cerdo ahumadas", "en": "Smoked pork ribs" }, "desc": { "es": "Ración de costillas ahumadas, marinadas en salsa roja.", "en": "A rack of smoked ribs marinated in red sauce." }, "precio": 16 },
+            { "nombre": { "es": "Pulpo al grill", "en": "Grilled octopus" }, "desc": { "es": "Pulpo a la parrilla al balsámico.", "en": "Octopus grilled with balsamic." }, "precio": 26 },
+            { "nombre": { "es": "Parrilla mixta", "en": "Mixed grill" }, "desc": { "es": "Carne y pollo.", "en": "Beef and chicken." }, "precio": 24 },
+            { "nombre": { "es": "Parrilla mar y tierra", "en": "Surf and turf grill" }, "desc": { "es": "Carne, pollo y mariscos.", "en": "Beef, chicken and seafood." }, "precio": 32 },
+            { "nombre": { "es": "Camarones al ajillo", "en": "Garlic shrimp" }, "desc": { "es": "Con ajo y cilantro.", "en": "With garlic and coriander." }, "precio": 18 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "asiatica",
+      "nombre": { "es": "Asiática", "en": "Asian" },
+      "grupos": [
+        {
+          "nombre": { "es": "Para empezar", "en": "To start" },
+          "platos": [
+            { "nombre": { "es": "Mini lumpias", "en": "Mini lumpia" }, "desc": { "es": "4 unidades rellenas de vegetales con salsa de pimentón agridulce.", "en": "4 vegetable spring rolls with sweet and sour pepper sauce." }, "precio": 7 },
+            { "nombre": { "es": "Korokke de sake y kani", "en": "Salmon and crab korokke" }, "desc": { "es": "4 croquetas de salmón y cangrejo con tártara y salsa de anguila.", "en": "4 salmon and crab croquettes with tartare and eel sauce." }, "precio": 9 },
+            { "nombre": { "es": "Gyozas", "en": "Gyoza" }, "desc": { "es": "4 unidades fritas o al vapor, rellenas de cerdo con puntos de mostaza.", "en": "4 fried or steamed pork dumplings with dots of mustard." } },
+            { "nombre": { "es": "Coquitos", "en": "Coquitos" }, "desc": { "es": "Salmón relleno de queso crema y aguacate, bañado en salsa de curry y anguila.", "en": "Salmon filled with cream cheese and avocado, in curry and eel sauce." }, "precio": 11 },
+            { "nombre": { "es": "Inari kushikatsu", "en": "Inari kushikatsu" }, "desc": { "es": "Pinchos de plátano y queso empanizados con salsa de curry y de anguila.", "en": "Breaded plantain and cheese skewers with curry and eel sauce." }, "precio": 8 },
+            { "nombre": { "es": "Ensalada surimi", "en": "Surimi salad" }, "desc": { "es": "Algas y masago, cangrejo y aguacate, coronada con langostinos empanizados.", "en": "Seaweed and masago, crab and avocado, topped with breaded prawns." }, "precio": 12 },
+            { "nombre": { "es": "Nigiri tradicional", "en": "Traditional nigiri" }, "desc": { "es": "Cortes de pescado fresco: salmón, atún y cangrejo.", "en": "Fresh cuts of salmon, tuna and crab." }, "precio": 8 }
+          ]
+        },
+        {
+          "nombre": { "es": "Platos fuertes", "en": "Mains" },
+          "platos": [
+            { "nombre": { "es": "Chao fan", "en": "Chao fan" }, "desc": { "es": "Arroz frito con vegetales, huevo y carne o pollo, tradicional con salsa de soya o cantonés.", "en": "Fried rice with vegetables, egg and beef or chicken, traditional with soy sauce or Cantonese." }, "precio": 12 },
+            { "nombre": { "es": "Yakimeshi", "en": "Yakimeshi" }, "desc": { "es": "Arroz salteado con camarones y vegetales al estilo japonés, con huevo y katsuobushi.", "en": "Japanese-style fried rice with shrimp and vegetables, egg and katsuobushi." }, "precio": 17 },
+            { "nombre": { "es": "Pad thai", "en": "Pad thai" }, "desc": { "es": "Fideos al huevo con camarones, merey, brotes de soya y salsa thai cítrica dulce.", "en": "Egg noodles with shrimp, cashews, bean sprouts and a sweet citrus Thai sauce." }, "precio": 14 },
+            { "nombre": { "es": "Ihaithai", "en": "Ihaithai" }, "desc": { "es": "Fideos salteados con vegetales y lomito en salsa de ostras, sobre crema de coco y queso, estilo thai.", "en": "Stir-fried noodles with vegetables and beef in oyster sauce, on Thai-style coconut cream and cheese." }, "precio": 13 },
+            { "nombre": { "es": "Lo mein kao", "en": "Lo mein kao" }, "desc": { "es": "Fideos de trigo o arroz salteados con vegetales, salsa de ostras y pollo.", "en": "Wheat or rice noodles stir-fried with vegetables, oyster sauce and chicken." }, "precio": 12 },
+            { "nombre": { "es": "Sopa miso", "en": "Miso soup" }, "desc": { "es": "Caldo miso con camarones, cebollín, huevo encurtido y katsuobushi.", "en": "Miso broth with shrimp, spring onion, pickled egg and katsuobushi." }, "precio": 10 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rolls",
+      "nombre": { "es": "Rolls", "en": "Rolls" },
+      "grupos": [
+        {
+          "nombre": { "es": "Rolls fríos", "en": "Cold rolls" },
+          "platos": [
+            { "nombre": { "es": "Rainbow", "en": "Rainbow" }, "desc": { "es": "Kani, pepino y aguacate, cubierto con masago y sésamo, con wakame y topping de pescado.", "en": "Kani, cucumber and avocado, covered in masago and sesame, with wakame and a fish topping." }, "precio": 12 },
+            { "nombre": { "es": "Friend", "en": "Friend" }, "desc": { "es": "Langostinos empanizados, queso crema y cebollín, cubierto con aguacate, salsa de anguila y mayo-spice.", "en": "Breaded prawns, cream cheese and spring onion, covered in avocado, eel sauce and spicy mayo." }, "precio": 12 },
+            { "nombre": { "es": "VIP", "en": "VIP" }, "desc": { "es": "Cangrejo, pepino, aguacate y zanahoria, con salmón gratinado con miso-mirin.", "en": "Crab, cucumber, avocado and carrot, topped with salmon gratinated in miso-mirin." }, "precio": 10 },
+            { "nombre": { "es": "Cero punto luxe", "en": "Cero punto luxe" }, "desc": { "es": "Sin arroz: cortes de pescados frescos, surimi y ensalada de algas.", "en": "No rice: fresh fish, surimi and seaweed salad." }, "precio": 12 },
+            { "nombre": { "es": "Spice sake", "en": "Spice sake" }, "desc": { "es": "Relleno de tartar de salmón, topping de salmón y tartar de salmón.", "en": "Filled with salmon tartare, topped with salmon and salmon tartare." }, "precio": 18 },
+            { "nombre": { "es": "Scorpion", "en": "Scorpion" }, "desc": { "es": "Cangrejo y aguacate, con camarones hervidos y masago por encima.", "en": "Crab and avocado, topped with poached shrimp and masago." }, "precio": 13 },
+            { "nombre": { "es": "Banana", "en": "Banana" }, "desc": { "es": "Camarón y cangrejo empanizado, cebollín y queso crema, cubierto con plátano y ensalada dinamita, en salsa fuji.", "en": "Breaded shrimp and crab, spring onion and cream cheese, wrapped in plantain with dynamite salad, in fuji sauce." }, "precio": 15 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mexicana",
+      "nombre": { "es": "Mexicana", "en": "Mexican" },
+      "grupos": [
+        {
+          "nombre": { "es": "Para empezar", "en": "To start" },
+          "platos": [
+            { "nombre": { "es": "Nachos", "en": "Nachos" }, "desc": { "es": "Tortilla de maíz frita con queso cheddar y tocineta troceada.", "en": "Fried corn tortilla chips with cheddar and chopped bacon." }, "variantes": [
+              { "nombre": { "es": "Clásicos", "en": "Classic" }, "precio": 8 },
+              { "nombre": { "es": "Con carne o pollo", "en": "With beef or chicken" }, "precio": 11 }
+            ] }
+          ]
+        },
+        {
+          "nombre": { "es": "Platos fuertes", "en": "Mains" },
+          "platos": [
+            { "nombre": { "es": "Tacos", "en": "Tacos" }, "desc": { "es": "Tortilla de maíz, lechuga, queso blanco, guacamole, crema de frijoles y crema agria.", "en": "Corn tortilla, lettuce, white cheese, guacamole, refried beans and sour cream." }, "variantes": [
+              { "nombre": { "es": "De carne", "en": "Beef" }, "precio": 12 },
+              { "nombre": { "es": "De pollo", "en": "Chicken" }, "precio": 12 },
+              { "nombre": { "es": "De porkbelly, con maíz", "en": "Pork belly, with corn" }, "precio": 13 }
+            ] },
+            { "nombre": { "es": "Tostadas", "en": "Tostadas" }, "desc": { "es": "Tortilla de maíz, lechuga, queso blanco, guacamole, crema de frijoles y crema agria.", "en": "Corn tortilla, lettuce, white cheese, guacamole, refried beans and sour cream." }, "variantes": [
+              { "nombre": { "es": "De carne", "en": "Beef" }, "precio": 11 },
+              { "nombre": { "es": "De pollo", "en": "Chicken" }, "precio": 11 },
+              { "nombre": { "es": "De porkbelly, con maíz", "en": "Pork belly, with corn" }, "precio": 13 }
+            ] },
+            { "nombre": { "es": "Burrito tradicional", "en": "Traditional burrito" }, "desc": { "es": "Tortilla de trigo, carne, mozzarella, crema de frijol, lechuga, pico de gallo, guacamole, maíz y crema agria.", "en": "Flour tortilla, beef, mozzarella, refried beans, lettuce, pico de gallo, guacamole, corn and sour cream." }, "precio": 11 },
+            { "nombre": { "es": "Burrito de tocineta y queso suizo", "en": "Bacon and Swiss cheese burrito" }, "desc": { "es": "Tortilla de maíz con carne, queso suizo, lechuga y guacamole, enrollada en tocineta.", "en": "Corn tortilla with beef, Swiss cheese, lettuce and guacamole, wrapped in bacon." }, "precio": 12 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pastas",
+      "nombre": { "es": "Pastas y hamburguesas", "en": "Pasta and burgers" },
+      "grupos": [
+        {
+          "nombre": { "es": "Pastas", "en": "Pasta" },
+          "nota": { "es": "Salsas: amatriciana, puttanesca, carbonara o pesto.", "en": "Sauces: amatriciana, puttanesca, carbonara or pesto." },
+          "platos": [
+            { "nombre": { "es": "Tortellini", "en": "Tortellini" }, "desc": { "es": "Pasta de la casa rellena de ricota y espinaca, en la salsa que elijas.", "en": "House pasta filled with ricotta and spinach, in the sauce you choose." }, "precio": 12 },
+            { "nombre": { "es": "Ravioli", "en": "Ravioli" }, "desc": { "es": "Pasta de la casa rellena de cordero, en la salsa que elijas.", "en": "House pasta filled with lamb, in the sauce you choose." }, "precio": 12 },
+            { "nombre": { "es": "Linguini", "en": "Linguini" }, "variantes": [
+              { "nombre": { "es": "Con la salsa que elijas", "en": "With the sauce you choose" }, "precio": 12 },
+              { "nombre": { "es": "Alfredo de vegetales", "en": "Vegetable Alfredo" }, "precio": 14 },
+              { "nombre": { "es": "Alfredo de lomito", "en": "Beef Alfredo" }, "precio": 14 },
+              { "nombre": { "es": "Alfredo de camarones", "en": "Shrimp Alfredo" }, "precio": 18 },
+              { "nombre": { "es": "A la marinera", "en": "Marinara seafood" }, "precio": 22 }
+            ] }
+          ]
+        },
+        {
+          "nombre": { "es": "Hamburguesas, con papas fritas", "en": "Burgers, with fries" },
+          "platos": [
+            { "nombre": { "es": "Carne ahumada + grill", "en": "Smoked beef + grill" }, "desc": { "es": "200 g de carne de res, lechuga, tomate, cheddar y tocineta.", "en": "200 g beef patty, lettuce, tomato, cheddar and bacon." }, "precio": 11 },
+            { "nombre": { "es": "Pollo crispy", "en": "Crispy chicken" }, "desc": { "es": "Pechuga de pollo, doble cheddar y tocineta troceada.", "en": "Chicken breast, double cheddar and chopped bacon." }, "precio": 11 },
+            { "nombre": { "es": "César", "en": "Caesar" }, "desc": { "es": "Pechuga de pollo, cheddar, doble tocineta y aderezo César.", "en": "Chicken breast, cheddar, double bacon and Caesar dressing." }, "precio": 12 },
+            { "nombre": { "es": "Nuggets o tenders, para niños", "en": "Nuggets or tenders, for kids" }, "desc": { "es": "Con papas fritas y salsa de tomate.", "en": "With fries and ketchup." }, "precio": 9 }
+          ]
+        }
+      ]
+    }
+  ],
+  "cocteles": [
+    { "nombre": { "es": "Unuma", "en": "Unuma" }, "desc": { "es": "Colada, licor de coco, ron blanco, piña y leche condensada.", "en": "Colada, coconut liqueur, white rum, pineapple and condensed milk." }, "precio": 7 },
+    { "nombre": { "es": "Marahuaca", "en": "Marahuaca" }, "desc": { "es": "Sangría, chinotto, limón y naranja.", "en": "Sangria, chinotto, lime and orange." }, "precio": 5 },
+    { "nombre": { "es": "Salvaje", "en": "Salvaje" }, "desc": { "es": "Ron dorado, limón, jengibre y azúcar.", "en": "Gold rum, lime, ginger and sugar." }, "precio": 4 },
+    { "nombre": { "es": "Mojito eléctrico", "en": "Electric mojito" }, "desc": { "es": "Ron blanco y curaçao.", "en": "White rum and curaçao." }, "precio": 4 },
+    { "nombre": { "es": "Tequila atardecer", "en": "Tequila sunset" }, "desc": { "es": "Tequila, granadina y jugo de naranja.", "en": "Tequila, grenadine and orange juice." }, "precio": 6 },
+    { "nombre": { "es": "Daiquiri", "en": "Daiquiri" }, "desc": { "es": "Ron blanco, curaçao y fresas.", "en": "White rum, curaçao and strawberries." }, "precio": 5 },
+    { "nombre": { "es": "Negroni", "en": "Negroni" }, "desc": { "es": "Base de vino, gin y Campari.", "en": "A wine base, gin and Campari." }, "precio": 6 },
+    { "nombre": { "es": "Old fashioned", "en": "Old fashioned" }, "desc": { "es": "Whiskey y ron añejo.", "en": "Whiskey and aged rum." }, "precio": 6 },
+    { "nombre": { "es": "Sexo en la playa", "en": "Sex on the beach" }, "desc": { "es": "Vodka, licor de coco, jugo de naranja o piña y jugo de arándano.", "en": "Vodka, coconut liqueur, orange or pineapple juice and cranberry juice." }, "precio": 4.5 }
+  ]
+}

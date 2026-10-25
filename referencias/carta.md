@@ -1,7 +1,7 @@
 # Carta de La Jungla Gastro-Bar
 
 Transcrita de las capturas de la carta en Canva (Instagram), octubre 2026.
-Precios en dólares. Las marcas **[revisar]** son dudas para confirmar con el local.
+Precios en dólares. Dudas resueltas con el cliente; Ulifi, Margarita y Moscow mule quedan fuera de la web.
 
 ## Entradas
 
@@ -31,7 +31,7 @@ Precios en dólares. Las marcas **[revisar]** son dudas para confirmar con el lo
 |---|---|---|
 | Mini lumpias | 4 unidades rellenas de vegetales con salsa de pimentón agridulce. | 7 |
 | Korokke de sake y kani | 4 croquetas de salmón y cangrejo con tártara y salsa de anguila. | 9 |
-| Gyozas | 4 unidades fritas o al vapor, rellenas de cerdo con puntos de mostaza. | **[revisar: la carta dice "X"]** |
+| Gyozas | 4 unidades fritas o al vapor, rellenas de cerdo con puntos de mostaza. | Sin precio (confirmado) |
 | Coquitos | Salmón relleno de queso crema y aguacate, bañado en salsa de curry y anguila. | 11 |
 | Inari kushikatsu | Pinchos de plátano y queso empanizados con salsa de curry y de anguila. | 8 |
 | Ensalada surimi | Ensalada de algas y masago, cangrejo, aguacate, coronada con langostinos empanizados. | 12 |
@@ -45,9 +45,9 @@ Precios en dólares. Las marcas **[revisar]** son dudas para confirmar con el lo
 |---|---|---|
 | Centro de lomito | 200 g de centro de lomito de res al término, con salsa a elección: oporto, champiñones o maître d'hôtel. | 18 |
 | Churrasco de pescado | Con salsa a elección: meunière, al ajillo, salsa verde o vinagreta de limón y alcaparras. | 16 |
-| Churrasco de pescado con camarones | Con curry de camarones o ajillo de camarones. **[revisar: entendí que estas dos salsas suben el precio a 18]** | 18 |
-| Cordon bleu de ave | **[revisar: la carta trae la descripción del pescado, "200 g de pesca del día con salsas para acompañar a su elección"]** | 16 |
-| Milanesa de pollo | Suprema empanizada con salsa napolitana al gratén. **[revisar: la carta dice "napole"]** | 15 |
+| Churrasco de pescado con camarones | Con curry de camarones o ajillo de camarones. | 18 |
+| Cordon bleu de ave | Sin descripción: la de la carta ("200 g de pesca del día…") es la del pescado. | 16 |
+| Milanesa de pollo | Suprema empanizada con salsa napolitana al gratén. | 15 |
 | Costillas de cerdo ahumadas | Ración de costillas ahumadas, marinadas en salsa roja. | 16 |
 | Pulpo al grill | Pulpo a la parrilla al balsámico. | 26 |
 | Parrilla mixta | Carne y pollo. | 24 |
@@ -105,7 +105,7 @@ Todas acompañadas de papas fritas.
 | Chao fan cantonés | Arroz frito con vegetales, huevo y proteína a elección (carne o pollo). | 12 |
 | Yakimeshi | Arroz salteado con camarones y vegetales al estilo japonés, coronado con huevo y katsuobushi. | 17 |
 | Pad thai | Fideos al huevo con camarones, merey, brotes de soya y salsa thai cítrica dulce. | 14 |
-| Ihaithai **[revisar: nombre]** | Fideos salteados con vegetales y lomito en salsa de ostras, sobre crema de coco y queso, estilo thai. | 13 |
+| Ihaithai | Fideos salteados con vegetales y lomito en salsa de ostras, sobre crema de coco y queso, estilo thai. | 13 |
 | Lo mein kao | Fideos de trigo o arroz, salteados con vegetales, salsa de ostras y pollo. | 12 |
 | Sopa miso | Caldo miso con camarones, cebollín, huevo encurtido y katsuobushi. | 10 |
 
@@ -114,10 +114,10 @@ Todas acompañadas de papas fritas.
 | Plato | Descripción | Precio |
 |---|---|---|
 | Rainbow | Relleno de kani, pepino y aguacate, cubierto con masago y semillas de sésamo, coronado con wakame y topping de pescado. | 12 |
-| ...friend **[revisar: el nombre está tapado en la carta]** | Relleno de langostinos empanizados, queso crema y cebollín, cubierto con aguacate, salsa de anguila y mayo-spice. | 12 |
+| Friend (el inicio del nombre está tapado en la carta) | Relleno de langostinos empanizados, queso crema y cebollín, cubierto con aguacate, salsa de anguila y mayo-spice. | 12 |
 | VIP | Relleno de cangrejo, pepino, aguacate y zanahoria, topping de salmón gratinado con miso-mirin. | 10 |
 | Cero punto luxe | Sin arroz. Relleno de cortes de pescados frescos, surimi y ensalada de algas. | 12 |
-| Spice sake | Relleno de tartar de salmón, topping de salmón y tartar de salmón. **[revisar: la descripción repite el tartar]** | 18 |
+| Spice sake | Relleno de tartar de salmón, topping de salmón y tartar de salmón. | 18 |
 | Scorpion | Relleno de cangrejo y aguacate, con topping de camarones hervidos y masago. | 13 |
 | Banana | Relleno de camarón y cangrejo empanizado, cebollín y queso crema, cubierto con lonjas de plátano y topping de ensalada dinamita, bañado en salsa fuji. | 15 |
 
@@ -128,15 +128,12 @@ Todas acompañadas de papas fritas.
 | Cóctel | Descripción | Precio |
 |---|---|---|
 | Unuma | Colada, licor de coco, ron blanco, piña y leche condensada. | 7 |
-| Ulifi | Fruta de temporada, ron blanco, azúcar y zumo. **[revisar: el final está tapado en la carta]** | 6 |
 | Salvaje | Ron dorado, limón, jengibre y azúcar. | 4 |
 | Mojito eléctrico | Ron blanco y curaçao. | 4 |
 | Marahuaca | Sangría, chinotto, limón y naranja. | 5 |
-| Margarita | Tequila y gin o vodka. **[revisar: receta poco común]** | 6 |
 | Old fashioned | Whiskey y ron añejo. | 6 |
 | Daiquiri | Ron blanco, curaçao y fresas. | 5 |
 | Negroni | Base de vino, gin y Campari. | 6 |
-| Moscow mule | Vodka, cerveza y gin. **[revisar: ¿cerveza de jengibre?]** | 6 |
 | Tequila atardecer | Tequila, granadina y jugo de naranja. | 6 |
 | Sexo en la playa | Vodka, licor de coco, jugo de naranja o piña y jugo de arándano. | 4,50 |
 

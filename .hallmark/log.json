@@ -1,0 +1,39 @@
+[
+ {
+  "shape": "Conversational FAQ",
+  "theme": "spore",
+  "axes": "dark/roman-serif/warm",
+  "hero": "Index",
+  "nav": "banner over a retracting bar",
+  "footer": "colophon block",
+  "imagery": "photographs, client 4 (menu crops) + library 1, warm",
+  "photos": [
+   "Cure_cocktail_bar_New_Orleans_2011"
+  ],
+  "entry": "index.html",
+  "fingerprint": [
+   "faq",
+   "index-hero",
+   "dark",
+   "serif",
+   "menu-switcher",
+   "booking-close"
+  ],
+  "sections": [
+   "Index hero",
+   "Grid (four dish photos)",
+   "Switcher (menu by kitchen)",
+   "Figure + rows (cocktails)",
+   "Schedule (week and place)",
+   "Form + photo (booking band)",
+   "Colophon"
+  ],
+  "signature": "the menu indexed by kitchen with its real price spans, as the hero visual",
+  "waived": [
+   "81"
+  ],
+  "prompt": "La Jungla Gastro Bar, Puerto Ayacucho: bilingual page for travellers, book on WhatsApp",
+  "date": "2026-10-25",
+  "mode": "build"
+ }
+]

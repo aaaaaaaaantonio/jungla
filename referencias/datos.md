@@ -9,12 +9,20 @@ Solo hechos confirmados por el cliente o por su propio material. Lo que falta qu
 - **Dirección:** Av. Perimetral, Puerto Ayacucho, estado Amazonas, Venezuela.
 - **Horario:** martes a domingo, de 11:30 a. m. a 11:30 p. m. Lunes cerrado (se deduce del horario).
 - **Servicios:** reservas y delivery.
-- **Teléfono:** +58 416-502 7741.
+- **Teléfono y WhatsApp:** +58 416-502 7741 (`https://wa.me/584165027741`).
 - **Instagram:** [@la__jungla](https://www.instagram.com/la__jungla/) (con dos guiones bajos).
 - **Google Maps:** https://maps.app.goo.gl/dBsyvLY2KjqjJxrk9 (para el botón "Cómo llegar").
 - **Google:** el perfil de Instagram enlaza a `share.google/qmClHdmlYBFfvP5ND` y a dos enlaces más.
 - **RIF:** J-401829481.
 - **Precios:** en dólares. Entradas de 6 a 16, principales de 9 a 32, cócteles de 4 a 7.
+
+## Encargo
+
+- **Qué es:** propuesta de página web.
+- **Público:** sobre todo gente de afuera que viaja al estado Amazonas y busca dónde comer en Puerto Ayacucho. También el público local.
+- **Acción principal:** reservar o pedir delivery por WhatsApp. Después, ver la carta y cómo llegar.
+- **Tono:** nocturno y elegante.
+- **Idiomas:** español e inglés.
 
 ## Identidad visual
 
@@ -24,8 +32,6 @@ Solo hechos confirmados por el cliente o por su propio material. Lo que falta qu
 
 ## Pendiente
 
-- ¿El teléfono tiene WhatsApp?
-- Logo original en archivo (PNG o SVG con fondo transparente, o el PDF/AI del diseñador).
-- Fotos originales en alta resolución: platos, cócteles, el bar, el salón, la gente.
+- No hay logo en archivo: reenviar la captura del logo para recortarla.
+- No hay fotos originales: es una propuesta y se arma con capturas de Instagram.
 - Rolls calientes, otras bebidas y postres, si existen.
-- Las dudas marcadas **[revisar]** en `carta.md`.

@@ -37,9 +37,20 @@ const T = {
     ],
     platosLabel: "Platos de La Jungla",
     platos: [
-      ["mesa-amigas", "Tres amigas comen hamburguesas con papas en una mesa de La Jungla", "Gente comiendo en una mesa de La Jungla, de noche", 923, 1000],
+      ["terraza", "La terraza de La Jungla de noche, con plantas, luces cálidas y el nombre en la pared", "La entrada y la terraza, de noche", 733, 700],
       ["pasta-amatriciana", "Pasta amatriciana con tocineta y parmesano", "Un plato de la carta, de cerca", 923, 750],
       ["hamburguesa-brioche", "Hamburguesa con tocineta, cheddar y lechuga en pan brioche", "Un plato de la carta, de cerca y sobre fondo oscuro", 923, 875],
+    ],
+    logoAlt: "La Jungla Gastro Bar",
+    dentroH: "¿Cómo es por dentro?",
+    dentroLead: "El salón, la barra y la cocina, de noche.",
+    dentroLabel: "Fotos del local",
+    dentro: [
+      ["salon", "El salón", "El salón con las mesas puestas, plantas colgantes y luces cálidas", 705, 800],
+      ["barra", "La barra", "Una clienta en su mesa, con la barra y sus botellas iluminadas detrás", 800, 1000],
+      ["cocina", "La cocina", "El cocinero flamea un sartén en la cocina", 693, 990],
+      ["mesa-amigas", "En la mesa", "Tres amigas comen hamburguesas con papas", 923, 1000],
+      ["hamburguesa-celosia", "La pared de celosía", "Una hamburguesa frente a la pared de celosía con plantas", 923, 1110],
     ],
     cartaH: "¿Qué hay en la carta?",
     cartaLead: "Precios en dólares. Toca un plato para ver qué lleva.",
@@ -63,8 +74,8 @@ const T = {
     fallbackDays: ["El martes", "El miércoles", "El jueves", "El viernes", "El sábado", "El domingo"],
     deliveryQ: "¿Prefieres delivery?",
     deliveryA: "Pídelo por WhatsApp",
-    cierreAlt: "La barra de La Jungla de noche, con las botellas iluminadas",
-    cierreImgAlt: "Una clienta come en una mesa de La Jungla, con la barra y sus botellas iluminadas detrás",
+    cierreAlt: "El letrero del jaguar, el símbolo de La Jungla",
+    cierreImgAlt: "El jaguar del logo, recortado en una placa de metal e iluminado en ámbar",
     barText: "Mesa o delivery, por WhatsApp.",
     barDelivery: "Pedir delivery",
     barBook: "Reservar mesa",
@@ -97,9 +108,20 @@ const T = {
     ],
     platosLabel: "Dishes at La Jungla",
     platos: [
-      ["mesa-amigas", "Three friends eating burgers and fries at a table in La Jungla", "People eating at a table in La Jungla, at night", 923, 1000],
+      ["terraza", "La Jungla’s terrace at night, with plants, warm lights and the name on the wall", "The entrance and the terrace, at night", 733, 700],
       ["pasta-amatriciana", "Pasta amatriciana with bacon and parmesan", "A dish from the menu, close up", 923, 750],
       ["hamburguesa-brioche", "A burger with bacon, cheddar and lettuce on a brioche bun", "A dish from the menu, close up on a dark ground", 923, 875],
+    ],
+    logoAlt: "La Jungla Gastro Bar",
+    dentroH: "What’s it like inside?",
+    dentroLead: "The dining room, the bar and the kitchen, at night.",
+    dentroLabel: "Photos of the place",
+    dentro: [
+      ["salon", "The dining room", "The dining room with tables laid, hanging plants and warm lights", 705, 800],
+      ["barra", "The bar", "A guest at her table, the bar and its lit bottles behind her", 800, 1000],
+      ["cocina", "The kitchen", "The cook flaming a pan in the kitchen", 693, 990],
+      ["mesa-amigas", "At the table", "Three friends eating burgers and fries", 923, 1000],
+      ["hamburguesa-celosia", "The lattice wall", "A burger held up in front of the lattice wall and its plants", 923, 1110],
     ],
     cartaH: "What’s on the menu?",
     cartaLead: "Prices in US dollars. Tap a dish to see what’s in it.",
@@ -123,8 +145,8 @@ const T = {
     fallbackDays: ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
     deliveryQ: "Rather have it delivered?",
     deliveryA: "Order on WhatsApp",
-    cierreAlt: "La Jungla’s bar at night, the bottles lit",
-    cierreImgAlt: "A guest eating at a table in La Jungla, the bar and its lit bottles behind her",
+    cierreAlt: "The jaguar sign, La Jungla’s emblem",
+    cierreImgAlt: "The jaguar from the logo, cut into a metal plate and lit in amber",
     barText: "A table or delivery, on WhatsApp.",
     barDelivery: "Order delivery",
     barBook: "Book a table",
@@ -162,6 +184,9 @@ function spanOf(ids) {
   return [Math.min(...all), Math.max(...all)];
 }
 
+const FRAME = `<svg class="frame" aria-hidden="true" data-keep><rect pathLength="1"/></svg>`;
+const photo = (cls, slot, slotAlt, src, w, h, alt, extra = "") => `<figure class="photo ${cls}" data-slot="${slot}" data-alt="${esc(slotAlt)}" data-anim="photo"><img src="${src}" width="${w}" height="${h}" alt="${esc(alt)}" loading="lazy"${extra}>${FRAME}</figure>`;
+
 const PLUS = `<svg class="dish__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg>`;
 
 function dish(p, lang) {
@@ -183,7 +208,7 @@ function panel(k, lang, i) {
   const groups = k.grupos.map((g) => `
           <div class="group">
             <h4 class="group__title">${esc(g.nombre[lang])}</h4>
-            <ul class="dishes" role="list">${g.platos.map((p) => dish(p, lang)).join("")}</ul>${g.nota ? `
+            <ul class="dishes" role="list" data-anim="lines">${g.platos.map((p) => dish(p, lang)).join("")}</ul>${g.nota ? `
             <p class="group__note">${esc(g.nota[lang])}</p>` : ""}
           </div>`).join("");
   return `
@@ -236,7 +261,7 @@ function page(lang) {
 
 <nav class="bar" aria-label="${t.navLabel}" data-bar>
   <div class="container bar__in">
-    <a class="wordmark" href="./" aria-label="${t.home}"><img src="${root}assets/img/logo-la-jungla.png" width="500" height="480" alt=""></a>
+    <a class="wordmark" href="./" aria-label="${t.home}"><img src="${root}assets/img/logo-la-jungla.png" width="684" height="640" alt=""></a>
     <ul class="bar__links" role="list">
       ${t.nav.map(([h, l]) => `<li><a href="${h}">${l}</a></li>`).join("\n      ")}
     </ul>
@@ -248,15 +273,16 @@ function page(lang) {
   <section class="hero" aria-labelledby="hero-h">
     <div class="container hero__grid">
       <div class="hero__text">
-        <h1 id="hero-h">${t.h1}</h1>
-        <p class="lead">${t.lead}</p>
-        <div class="actions">
+        <img class="hero__logo logo-draw" src="${root}assets/img/logo-la-jungla.png" width="684" height="640" alt="${t.logoAlt}" data-anim="logo" data-hero-logo>
+        <h1 id="hero-h" data-anim="up" style="--i: 2">${t.h1}</h1>
+        <p class="lead" data-anim="up" style="--i: 3">${t.lead}</p>
+        <div class="actions" data-anim="up" style="--i: 4">
           <a class="btn btn--primary" href="${wa(t.waBook)}" target="_blank" rel="noopener">${t.book}</a>
           <a class="btn btn--secondary" href="#carta">${t.seeMenu}</a>
         </div>
       </div>
       <nav class="index" aria-label="${t.indexLabel}">
-        <ul role="list">
+        <ul role="list" data-anim="lines">
           ${t.index.map((r) => { const [lo, hi] = spanOf(r.ids); return `<li><a href="${r.href}" data-tab="${r.ids[0]}"><span class="index__name">${r.name}</span><span class="index__dishes">${r.dishes}</span><span class="index__price">${range(lo, hi, lang)}</span></a></li>`; }).join("\n          ")}
         </ul>
       </nav>
@@ -265,13 +291,13 @@ function page(lang) {
 
   <section class="platos" aria-label="${t.platosLabel}">
     <div class="container platos__grid">
-      ${t.platos.map(([f, alt, slot, w, h], i) => `<figure class="photo ${i === 0 ? "photo--lead" : "photo--side"}" data-slot="${f}" data-alt="${esc(slot)}"><img src="${root}assets/img/${f}.jpg" width="${w}" height="${h}" alt="${esc(alt)}" loading="lazy"></figure>`).join("\n      ")}
+      ${t.platos.map(([f, alt, slot, w, h], i) => photo(i === 0 ? "photo--lead" : "photo--side", f, slot, `${root}assets/img/${f}.jpg`, w, h, alt)).join("\n      ")}
     </div>
   </section>
 
   <section class="carta" id="carta" aria-labelledby="carta-h">
     <div class="container">
-      <div class="head">
+      <div class="head" data-anim="up">
         <h2 id="carta-h">${t.cartaH}</h2>
         <p class="lead">${t.cartaLead}</p>
       </div>
@@ -285,26 +311,40 @@ function page(lang) {
 
   <section class="tragos" id="cocteles" aria-labelledby="tragos-h">
     <div class="container tragos__grid">
-      <div class="tragos__fig well grained">
-        <p class="figure">${withCurrency(fig, lang)}</p>
+      <div class="tragos__fig well grained" data-anim="up">
+        <p class="figure"><span class="visually-hidden">${withCurrency(fig, lang)}</span><svg class="figure__svg" viewBox="0 0 340 220" aria-hidden="true" data-anim="figure"><text x="2" y="182">${withCurrency(fig, lang)}</text></svg></p>
         <p class="figure__label">${t.figLabel}</p>
       </div>
       <div class="tragos__list">
-        <h2 id="tragos-h">${t.tragosH}</h2>
-        <p class="lead">${t.tragosLead}</p>
-        <ul class="dishes" role="list">${carta.cocteles.map((c) => dish(c, lang)).join("")}</ul>
+        <div class="head" data-anim="up">
+          <h2 id="tragos-h">${t.tragosH}</h2>
+          <p class="lead">${t.tragosLead}</p>
+        </div>
+        <ul class="dishes" role="list" data-anim="lines">${carta.cocteles.map((c) => dish(c, lang)).join("")}</ul>
       </div>
     </div>
   </section>
 
+  <section class="dentro" aria-labelledby="dentro-h">
+    <div class="container">
+      <div class="head" data-anim="up">
+        <h2 id="dentro-h">${t.dentroH}</h2>
+        <p class="lead">${t.dentroLead}</p>
+      </div>
+    </div>
+    <ul class="rail" role="list" tabindex="0" aria-label="${t.dentroLabel}">
+      ${t.dentro.map(([f, cap, alt, w, h]) => `<li><figure class="rail__item">${photo("photo--rail", f, alt, `${root}assets/img/${f}.jpg`, w, h, alt).replace(/^<figure/, "<div").replace(/<\/figure>$/, "</div>")}<figcaption>${cap}</figcaption></figure></li>`).join("\n      ")}
+    </ul>
+  </section>
+
   <section class="horario" id="horario" aria-labelledby="horario-h">
     <div class="container horario__grid">
-      <div class="horario__head">
+      <div class="horario__head" data-anim="up">
         <h2 id="horario-h">${t.horarioH}</h2>
         <p class="lead">${t.horarioLead}</p>
         <p class="links"><a href="${MAPS}" target="_blank" rel="noopener">${t.maps}</a><a href="${IG}" target="_blank" rel="noopener">${t.ig}</a></p>
       </div>
-      <table class="week">
+      <table class="week" data-anim="lines">
         <caption class="visually-hidden">${t.weekCaption}</caption>
         <tbody>
           ${t.days.map((d, i) => `<tr data-day="${(i + 1) % 7}"${i === 0 ? ' class="is-closed"' : ""}><th scope="row">${d}</th><td>${i === 0 ? t.closed : t.hours}</td></tr>`).join("\n          ")}
@@ -316,8 +356,10 @@ function page(lang) {
   <section class="reservar grained" id="reservar" aria-labelledby="reservar-h">
     <div class="container reservar__grid">
       <div class="reservar__text">
-        <h2 id="reservar-h">${t.reservarH}</h2>
-        <p class="lead">${t.reservarLead}</p>
+        <div class="head" data-anim="up">
+          <h2 id="reservar-h">${t.reservarH}</h2>
+          <p class="lead">${t.reservarLead}</p>
+        </div>
         <form class="booking" action="https://wa.me/${WA}" method="get" target="_blank" data-booking>
           <input type="hidden" name="text" value="${esc(t.waBook)}">
           <div class="fields">
@@ -330,7 +372,7 @@ function page(lang) {
         </form>
         <p class="delivery">${t.deliveryQ} <a href="${wa(t.waDelivery)}" target="_blank" rel="noopener">${t.deliveryA}</a>.</p>
       </div>
-      <figure class="photo photo--cierre" data-slot="cierre" data-alt="${esc(t.cierreAlt)}"><img src="${root}assets/img/barra.jpg" width="800" height="1000" alt="${esc(t.cierreImgAlt)}" style="object-position: 50% 40%" loading="lazy"></figure>
+      ${photo("photo--cierre", "cierre", t.cierreAlt, `${root}assets/img/jaguar.jpg`, 710, 785, t.cierreImgAlt, ' style="object-position: 40% 45%"')}
     </div>
   </section>
 </main>
@@ -347,7 +389,7 @@ function page(lang) {
 
 <footer class="colophon">
   <div class="container colophon__in">
-    <p class="colophon__mark"><img src="${root}assets/img/logo-la-jungla.png" width="500" height="480" alt="La Jungla Gastro Bar"></p>
+    <p class="colophon__mark"><img class="logo-draw" src="${root}assets/img/logo-la-jungla.png" width="684" height="640" alt="${t.logoAlt}" loading="lazy" data-anim="logo"></p>
     <div class="colophon__text">
       <p>${t.colophon}</p>
       <p class="colophon__credits" data-credits>${t.credits}</p>

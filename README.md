@@ -22,13 +22,13 @@ Los textos de la página (títulos, botones, dirección, horario) están en el o
 
 Todas salen del Instagram del local (@la__jungla), recortadas de capturas de pantalla sin los íconos ni los textos encima. Las capturas originales están en `referencias/instagram/`.
 
-| Espacio | Archivo | Qué muestra |
+| Espacio | Archivo | Dónde va |
 | --- | --- | --- |
-| `mesa-amigas` | `assets/img/mesa-amigas.jpg` | Tres amigas comiendo en una mesa. Foto grande, retrato 4:5. |
-| `pasta-amatriciana` | `assets/img/pasta-amatriciana.jpg` | Pasta amatriciana de cerca. |
-| `hamburguesa-brioche` | `assets/img/hamburguesa-brioche.jpg` | Hamburguesa en pan brioche sobre fondo oscuro. |
-| `cierre` | `assets/img/barra.jpg` | Una clienta en su mesa, con la barra iluminada detrás. Retrato 4:5. |
-| logo | `assets/img/logo-la-jungla.png` | Logo con fondo transparente, recortado de una foto del Instagram. |
+| `terraza` | `assets/img/terraza.jpg` | Foto grande después del inicio: la terraza de noche. |
+| `pasta-amatriciana`, `hamburguesa-brioche` | `assets/img/*.jpg` | Junto a la terraza. |
+| `salon`, `barra`, `cocina`, `mesa-amigas`, `hamburguesa-celosia` | `assets/img/*.jpg` | La tira deslizable de "¿Cómo es por dentro?". |
+| `cierre` | `assets/img/jaguar.jpg` | El letrero del jaguar, junto a la reserva. |
+| logo | `assets/img/logo-la-jungla.png` | Logo con fondo transparente, recortado de una foto del Instagram. Va grande en el inicio y en el pie, y pequeño en la barra cuando bajas. |
 
 Las capturas tienen como mucho 923 px de ancho, así que con las fotos originales (o el logo en vector) la página se vería más nítida. Para cambiar una foto, reemplaza el archivo en `assets/img/` con el mismo nombre.
 
@@ -41,6 +41,10 @@ En el repositorio: Settings, luego Pages, luego "Deploy from a branch", rama `ma
 - `referencias/carta.md`: la carta transcrita de las capturas, con las correcciones de ortografía.
 - `referencias/datos.md`: dirección, horario, contacto, identidad visual y pendientes.
 - `referencias/carta-capturas/`: las capturas originales de la carta.
+
+## Animaciones
+
+Todo se dibuja como la línea del logo: el logo se traza de arriba abajo al cargar, cada foto dibuja un marco fino como el del jaguar antes de mostrarse, las líneas de la carta y del horario se trazan de izquierda a derecha, y el precio de los cócteles se dibuja en contorno y luego se rellena. Cada animación corre una vez, al aparecer en pantalla. Con "reducir movimiento" activado en el teléfono o la computadora, todo aparece quieto y completo. Sin JavaScript, la página se ve completa y sin animaciones.
 
 ## Diseño
 

@@ -63,21 +63,58 @@
     todayRow.querySelector("th").append(chip);
   }
 
+  // ---------- animaciones: todo se dibuja como la línea del logo ----------
+  const still = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const show = (el) => el.classList.add("is-in");
+  function replay(el) {
+    if (still) return show(el);
+    el.classList.remove("is-in");
+    void el.offsetWidth; // reinicia la transición
+    show(el);
+  }
+  document.querySelectorAll('[data-anim="lines"]').forEach((list) => {
+    [...list.querySelectorAll(":scope > li, tr")].forEach((row, i) => row.style.setProperty("--i", i));
+  });
+  document.querySelectorAll(".rail .photo").forEach((ph, i) => ph.style.setProperty("--i", i));
+  document.querySelectorAll(".platos .photo").forEach((ph, i) => ph.style.setProperty("--i", i));
+  const animated = document.querySelectorAll("[data-anim]");
+  if (still || !("IntersectionObserver" in window)) animated.forEach(show);
+  else {
+    const io = new IntersectionObserver((es) => es.forEach((e) => {
+      if (!e.isIntersecting) return;
+      io.unobserve(e.target);
+      const img = e.target.dataset.anim === "photo" && e.target.querySelector("img");
+      if (img && !img.complete) {
+        img.addEventListener("load", () => show(e.target), { once: true });
+        img.addEventListener("error", () => show(e.target), { once: true });
+      } else show(e.target);
+    }), { rootMargin: "0px 0px -8% 0px", threshold: 0.01 });
+    animated.forEach((el) => io.observe(el));
+  }
+
+  // El logo de la barra aparece cuando el logo grande del inicio sale de la pantalla.
+  const heroLogo = document.querySelector("[data-hero-logo]");
+  const navBar = document.querySelector("[data-bar]");
+  if (heroLogo && navBar && "IntersectionObserver" in window) {
+    new IntersectionObserver(([e]) => navBar.classList.toggle("show-logo", !e.isIntersecting)).observe(heroLogo);
+  } else if (navBar) navBar.classList.add("show-logo");
+
   // ---------- pestañas de la carta ----------
   const sw = document.querySelector("[data-switch]");
   const tabs = sw ? [...sw.querySelectorAll('[role="tab"]')] : [];
   const panels = tabs.map((t) => document.getElementById(t.getAttribute("aria-controls")));
-  function select(i, focus) {
+  function select(i, focus, redraw = true) {
     tabs.forEach((t, j) => {
       const on = i === j;
       t.setAttribute("aria-selected", String(on));
       t.tabIndex = on ? 0 : -1;
       panels[j].hidden = !on;
+      if (on && redraw) panels[j].querySelectorAll('[data-anim="lines"]').forEach(replay);
     });
     if (focus) tabs[i].focus();
   }
   if (tabs.length) {
-    select(0);
+    select(0, false, false);
     tabs.forEach((t, i) => {
       t.addEventListener("click", () => select(i));
       t.addEventListener("keydown", (e) => {
